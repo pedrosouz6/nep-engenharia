@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    outline: none;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
 }
@@ -25,6 +26,7 @@
 #header {
     width: 100%;
     background-color: var(--color-main);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .3);
 
     position: fixed;
     top: 0;
@@ -45,6 +47,25 @@
     color: var(--color-secondary);
     font-weight: 500;
     letter-spacing: .3px;
+}
+
+#header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#header nav button.menu-fechar,
+#header nav button.menu-abrir {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#header nav button img {
+    width: 30px;
+    height: 30px;
 }
 
 #header nav ul {
@@ -203,7 +224,7 @@
     align-items: center;
 
     background-color: var(--color-main);
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
 }
 
 #projetos .container--projetos .cards p {
@@ -239,33 +260,102 @@
 /* rodape */
 #rodape {
     width: 100%;
-    height: 300px;
+    padding-top: 30px;
     background-color: silver;
 }
 
 #rodape .container--footer {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: space-between;
 }
 
 #rodape .container--footer .contact-us {
-    flex: 1 ;
-    background-color: red;
+    flex: 1 1 300px;
 }
 
-#rodape .container--footer .about {
-    flex: 1;
-    background-color: purple;
-} 
-
-#rodape .container--footer .about nav ul li {
+#rodape .container--footer .contact-us nav ul li {
     list-style: none;
-}
-
-#rodape .container--footer .about nav ul li a img {
-    width: 50px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
 }
 
 #rodape .container--footer .contact-us img {
-    width: 30px;
+    width: 25px;
+}
+
+#rodape .container--footer .about {
+    flex: 1 1 300px;
+} 
+
+#rodape .container--footer .about p {
+    margin-bottom: 1rem;
+}
+
+#rodape .container--footer .about nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+
+#rodape .container--footer .about nav ul li a img {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+#rodape .container--footer .contact-us h4,
+#rodape .container--footer .about h4 {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+}
+
+#rodape .container--footer .contact-us h4::after,
+#rodape .container--footer .about h4::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 2px;
+    background-color: var(--color-main);
+    margin-top: 1.5rem;
+}
+
+
+/* direitos */
+#rodape #direitos {
+    width: 100%;
+    padding: 16px;
+    background-color: rgb(161, 161, 161);
+    border-top: 2px solid white;
+    margin-top: 2rem;
+}
+
+#rodape #direitos p {
+    text-align: center;
+}
+
+@media (max-width: 730px) {
+    #header nav ul {
+        display: none;
+    }
+
+    #header nav button.menu-abrir {
+        display: block;
+    }
+
+    #header nav button.menu-fechar {
+        display: none;
+    }
+
+    #header nav.active button.menu-abrir{
+        display: none;
+    }
+
+    #header nav.active button.menu-fechar{
+        display: block;
+    }
 }
