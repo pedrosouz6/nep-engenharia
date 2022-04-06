@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+/* styles globals */
+.center {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* variables */
+/* color default: #88b06a */
+:root {
+    --color-main: #6ea544;
+    --color-secondary: white;
+}
+
+/* header */
+#header {
+    width: 100%;
+    background-color: var(--color-main);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#header .container--header {
+
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .logo--header h1 {
+    color: var(--color-secondary);
+    font-weight: 500;
+    letter-spacing: .3px;
+}
+
+#header nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 1.5rem;
+}
+
+#header nav ul li a {
+    text-decoration: none;
+    color: var(--color-secondary);
+
+    display: block;
+    padding: 8px 0;
+}
+
+
+/* home */
+#home {
+    margin-top: 70px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+#home .container--home {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .left {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .left h3 {
+    color: var(--color-main);
+    font-size: 40px;
+    margin-bottom: .5rem;
+}
+
+#home .left h4 {
+    font-size: 26px;
+    text-align: center;
+    color: rgb(179, 236, 22);
+    margin-bottom: 1.5rem;
+}
+
+#home .left p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#home .left button {
+    border: none;
+    cursor: pointer;
+
+    padding: 10px 28px;
+    border-radius: 3px;
+    letter-spacing: .5px;
+    font-size: 14px;
+    
+    background-color: var(--color-main);
+    color: white;
+
+    transition: .3s ease-in-out;
+}
+
+#home .left button:hover {
+    background-color: #5a8f32;
+}
+
+#home .right {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+#home .right img {
+    max-width: 500px;
+    width: 100%;
+}
+
+
+/* quem somos */
+#quem-somos {
+    width: 100%;
+    padding: 20px 0;
+}
+
+#quem-somos .header--quem-somos h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+#quem-somos .container--quem-somos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+#quem-somos .container--quem-somos .left {
+    flex: 1 1 377px;
+    display: flex;
+    justify-content: center;
+}
+
+#quem-somos .container--quem-somos .left img {
+    max-width: 500px;
+    width: 100%;
+}
+
+#quem-somos .container--quem-somos .right {
+    flex: 1 1 377px;
+}
+
+#quem-somos .container--quem-somos .right p {
+    text-indent: 30px;
+    line-height: 25px;
+}
+
+
+/* projetos */
+#projetos {
+    width: 100%;
+}
+
+#projetos .header--projetos h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#projetos .container--projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#projetos .container--projetos .cards {
+    width: 330px;
+    padding: 20px 20px 30px 20px;
+    border-radius: 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--color-main);
+    margin-bottom: 10rem;
+}
+
+#projetos .container--projetos .cards p {
+    margin-bottom: 1.5rem;
+}
+
+#projetos .container--projetos .cards button {
+    border: none;
+    cursor: pointer;
+
+    padding: 8px 18px;
+    border-radius: 3px;
+    letter-spacing: .5px;
+    font-size: 14px;
+    
+    background-color: white;
+    color: var(--color-main);
+
+    transition: .3s ease-in-out;
+    
+}
+
+#projetos .container--projetos .cards .cards-img {
+    width: 110px;
+    height: 130px;
+}
+
+#projetos .container--projetos .cards .cards-img img {
+    width: 100%;
+}
+
+
+/* rodape */
+#rodape {
+    width: 100%;
+    height: 300px;
+    background-color: silver;
+}
+
+#rodape .container--footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#rodape .container--footer .contact-us {
+    flex: 1 ;
+    background-color: red;
+}
+
+#rodape .container--footer .about {
+    flex: 1;
+    background-color: purple;
+} 
+
+#rodape .container--footer .about nav ul li {
+    list-style: none;
+}
+
+#rodape .container--footer .about nav ul li a img {
+    width: 50px;
+}
+
+#rodape .container--footer .contact-us img {
+    width: 30px;
+}
