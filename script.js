@@ -1,22 +1,16 @@
+//------------------------------menu------------------------------
 const navHeader = document.querySelector('.nav-header');
 const menuOpen = document.querySelector('.menu-abrir');
 const menuClose = document.querySelector('.menu-fechar');
-const cards = document.querySelector('.container--projetos');
-const target = document.querySelectorAll('[data-anima]');
-console.log(target)
 
-const project = document.querySelector('#projetos');
+const navHeaderLi = document.querySelectorAll('.nav-header ul li');
+const navHeaderLiLength = navHeaderLi.length;
 
-addEventListener('scroll', () => {
-    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
-    target.forEach((element) => {
-        if(windowTop > element.offsetTop) {
-            element.classList.add('animation');
-        } else {
-            element.classList.remove('animation');
-        }
+for(i = 0; i < navHeaderLiLength; i++) {
+    navHeaderLi[i].addEventListener('click', () => {
+        navHeader.classList.remove('active');
     })
-})
+}
 
 menuOpen.addEventListener('click', () => {
     navHeader.classList.add('active');
@@ -25,3 +19,25 @@ menuOpen.addEventListener('click', () => {
 menuClose.addEventListener('click', () => {
     navHeader.classList.remove('active');
 });
+
+
+
+//------------------------------animation------------------------------
+const target = document.querySelectorAll('[data-anima]');
+
+if(target.length) {
+    window.addEventListener('scroll', () => {
+        animaScroll();
+    })
+}
+
+function animaScroll() {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+    target.forEach((element) => {
+        if(windowTop > element.offsetTop) {
+            element.classList.add('animation');
+        } else {
+            element.classList.remove('animation');
+        }
+    })
+}
