@@ -1,8 +1,22 @@
 const navHeader = document.querySelector('.nav-header');
 const menuOpen = document.querySelector('.menu-abrir');
 const menuClose = document.querySelector('.menu-fechar');
-const paragraph = document.querySelector('#home .left p');
-const textArray = paragraph.innerHTML.split('');
+const cards = document.querySelector('.container--projetos');
+const target = document.querySelectorAll('[data-anima]');
+console.log(target)
+
+const project = document.querySelector('#projetos');
+
+addEventListener('scroll', () => {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+    target.forEach((element) => {
+        if(windowTop > element.offsetTop) {
+            element.classList.add('animation');
+        } else {
+            element.classList.remove('animation');
+        }
+    })
+})
 
 menuOpen.addEventListener('click', () => {
     navHeader.classList.add('active');
@@ -11,14 +25,3 @@ menuOpen.addEventListener('click', () => {
 menuClose.addEventListener('click', () => {
     navHeader.classList.remove('active');
 });
-
-function typeWrite() {
-    paragraph.innerHTML = '';
-    textArray.forEach((letter, index) => {
-        setTimeout(() => {
-            paragraph.innerHTML += letter
-        }, 50 * index)
-    })
-}
-
-typeWrite()
