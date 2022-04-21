@@ -17,18 +17,16 @@
     padding: 0 20px;
 }
 
-/* variables */
-/* color default: #88b06a */
-/* #6ea544 */
 :root {
     --color-main: #29975b;
-    --color-secondary: white;
+    --color-secondary: #e5f1eb;
+    --color-text: white;
     --gradient-text: linear-gradient(145deg, var(--color-main), #105c1c, var(--color-main));
 }
 
 main {
     width: 100%;
-    background-color: #e5f1eb;
+    background-color: var(--color-secondary);
 }
 
 /* header */
@@ -52,7 +50,7 @@ main {
 }
 
 #header .logo--header h1 {
-    color: var(--color-secondary);
+    color: var(--color-text);
     font-weight: 500;
     letter-spacing: .3px;
 }
@@ -73,7 +71,7 @@ main {
 
 #header nav button i {
     display: block;
-    color: white;
+    color: var(--color-text);
     font-size: 28px;
     font-weight: 700;
 }
@@ -87,7 +85,7 @@ main {
 
 #header nav ul li a {
     text-decoration: none;
-    color: var(--color-secondary);
+    color: var(--color-text);
 
     display: block;
     padding: 8px 0;
@@ -104,7 +102,7 @@ main {
     margin-top: 70px;
     width: 100%;
     padding: 20px 0;
-    background-color: #e5f1eb;
+    background-color: var(--color-secondary);
     z-index: 3;
     position: relative;
     overflow-y: hidden;
@@ -174,7 +172,7 @@ main {
     font-size: 14px;
     
     background-color: var(--color-main);
-    color: white;
+    color: var(--color-text);
 
     transition: .3s ease-in-out;
 }
@@ -242,7 +240,7 @@ main {
     font-size: 30px;
     text-align: center;
     
-    color: white;
+    color: var(--color-text);
 }
 
 #quem-somos .container--quem-somos {
@@ -259,7 +257,7 @@ main {
 }
 
 #quem-somos .container--quem-somos .left img {
-    max-width: 450px;
+    max-width: 400px;
     width: 100%;
 }
 
@@ -270,7 +268,7 @@ main {
 #quem-somos .container--quem-somos .right p {
     text-indent: 30px;
     line-height: 25px;
-    color: white;
+    color: var(--color-text);
 }
 
 
@@ -315,7 +313,7 @@ main {
 
 #projetos .container--projetos .cards p {
     margin-bottom: 1.5rem;
-    color: white;
+    color: var(--color-text);
     letter-spacing: .3px;
 }
 
@@ -328,7 +326,7 @@ main {
     letter-spacing: .5px;
     font-size: 14px;
     
-    background-color: white;
+    background-color: var(--color-text);
     color: var(--color-main);
 
     transition: .3s ease-in-out;
@@ -350,7 +348,7 @@ main {
     width: 100%;
     padding-top: 30px;
     background: linear-gradient(210deg, var(--color-main), #5ddd90, var(--color-main));
-    color: white;
+    color: var(--color-text);
 }
 
 #rodape .container--footer {
@@ -399,7 +397,7 @@ main {
 
 #rodape .container--footer .about nav ul li a i {
     font-size: 30px;
-    color: white;
+    color: var(--color-text);
 }
 
 #rodape .container--footer .contact-us h4,
@@ -414,7 +412,7 @@ main {
     display: block;
     width: 70px;
     height: 2px;
-    background-color: white;
+    background-color: var(--color-text);
     margin-top: 1.5rem;
 }
 
@@ -424,7 +422,7 @@ main {
     width: 100%;
     padding: 16px;
     background-color: var(--color-main);
-    border-top: 2px solid white;
+    border-top: 2px solid var(--color-text);
     margin-top: 2rem;
 }
 
@@ -445,7 +443,7 @@ main {
         top: 0;
         right: -400px;
         background: var(--color-main);
-        border-left: 2px solid white;
+        border-left: 2px solid var(--color-text);
         transition: .3s ease-in-out;
         opacity: 0;
     }
