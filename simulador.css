@@ -95,10 +95,149 @@
 
 /* main */
 main {
-    width: 100%;
-    height: calc(100vh - 70px);
     background-color: var(--color-secondary);
     margin-top: 70px;
+    padding: 40px 0;
+}
+
+#simulador section {
+    width: 100%;
+    min-height: calc(100vh - 150px);
+    max-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#simulador section #left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#simulador section #left h1 {
+    font-size: 20pt;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: .3px;
+    line-height: 32px;
+    color: #444;
+}
+
+#simulador section #result {
+    text-align: center;
+}
+
+#simulador section #result span {
+    color: var(--color-main);
+    font-weight: 700;
+}
+
+#simulador section #left h1 span {
+    color: var(--color-main);
+}
+
+#simulador section #left img {
+    max-width: 400px;
+}
+
+#simulador section article {
+    flex: 1 1 300px;
+}   
+
+#simulador section #right {
+    height: 100%;
+    padding: 8px 0;
+}
+
+#simulador section #right form {
+    margin: 0 auto;
+    max-width: 350px;
+    padding: 30px 25px;
+
+    background-color: rgb(245, 245, 245);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+
+    border-radius: 5px;
+}
+
+#erro-consumo {
+    text-align: center;
+    margin-top: -17px;
+    color: red;
+    font-weight: 500;
+    letter-spacing: .3px;
+    display: none;
+}
+
+#erro-watts {
+    text-align: center;
+    margin-top: -17px;
+    letter-spacing: .3px;
+    color: red;
+    font-weight: 500;
+    display: none;
+}
+
+#simulador section #right form h2 {
+    margin-bottom: 1rem;
+    color: #444;
+    position: relative;
+}
+
+#simulador section #right form h2 span {
+    color: var(--color-main);
+}
+
+#simulador section #right form h2::after {
+    content: '';
+    width: 59px;
+    height: 2px;
+    position: absolute;
+    background: var(--color-main);
+    bottom: 0px;
+    left: 53px;
+}
+
+#simulador section #right form input,
+#simulador section #right form select {
+    height: 38px;
+    padding: 0 7px;
+    border: 1px solid #555;
+    background-color: rgb(245, 245, 245);
+    outline: none;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    color: #555;
+}
+
+#simulador section #right form input:hover,
+#simulador section #right form select:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+} 
+
+#simulador section #right form input[type='submit'] {
+    background-color: var(--color-main);
+    color: var(--color-text);
+    border: none;
+    width: 95px;
+    cursor: pointer;
+    letter-spacing: .5px;
+    transition: .3s ease-in-out;
+    font-size: 500;
+}
+
+#simulador section #right form input[type='submit']:hover {
+    background-color: #2fa364;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
 }
 
 

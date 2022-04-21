@@ -18,8 +18,8 @@
                 </div>
                 <nav class="nav-header">
                     <ul>
-                        <li><a href='#quem-somos'>Quem somos?</a></li>
-                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href='./index.html#quem-somos'>Quem somos?</a></li>
+                        <li><a href="./index.html#projetos">Projetos</a></li>
                         <li><a href="#contato">Contato</a></li>
                         <li><a href="#simulador">Simulador</a></li>
                     </ul>   
@@ -31,17 +31,40 @@
         </div>
     </header>
 
-    <main>
-        <section>
-            <article>
-                
-            </article>
-            <article>
-                <form>
+    <main id='simulador'>
+        <div class="center">
+            <section>
+                <article id='left'>
+                    <h1>Faça sua <span>simulação</span> rápida e simples.</h1>
+                    <img src="./images/pages/simulador/painel-simulador.svg" alt="Painel simulador">
+                </article>
+                <article id='right'>
+                    <form id='form-calculo'>
+                        <h2>Simu<span>lador</span></h2>
+                        
+                        <input type="number" placeholder='Consumo mensal' min="1" id="consumo">
 
-                </form>
-            </article>
-        </section>
+                        <p id="erro-consumo">Preenchar esse campo</p>
+
+                        <select id="watts">
+                            <option disabled selected value=''>Watts dos Módulos Solares</option>
+                            <option value='300'>300w</option>
+                            <option value='350'>350w</option>
+                            <option value='420'>420w</option>
+                            <option value='460'>460w</option>
+                            <option value='525'>525w</option>
+                            <option value='600'>600w</option>
+                        </select>
+
+                        <p id='erro-watts'>Escolha o Watts</p>
+
+                        <input type="submit" value="Calcular">
+
+                        <p id="result"></p>
+                    </form>
+                </article>
+            </section>
+        </div>
     </main>
 
     <footer id="rodape">
@@ -99,5 +122,6 @@
     </footer>  
 
     <script src="./menu.js"></script>
+    <script src="./simulador.js"></script>
 </body>
 </html>
