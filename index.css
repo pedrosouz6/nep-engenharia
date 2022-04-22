@@ -162,7 +162,8 @@ main {
     font-size: 18px;
 }
 
-#home .left button {
+#home .left a {
+    text-decoration: none;
     border: none;
     cursor: pointer;
 
