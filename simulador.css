@@ -128,17 +128,7 @@ main {
     color: #444;
 }
 
-#simulador section #result {
-    text-align: center;
-    font-size: 13pt;
-    line-height: 23px;
-}
 
-#simulador section #result span {
-    color: var(--color-main);
-    font-weight: 700;
-    letter-spacing: .3px;
-}
 
 #simulador section #left h1 span {
     color: var(--color-main);
@@ -160,15 +150,14 @@ main {
 #simulador section #right form {
     margin: 0 auto;
     max-width: 390px;
-    min-height: 395px;
-    max-height: 430px;
+   
     padding: 30px 25px;
 
     background-color: rgb(245, 245, 245);
 
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.3rem;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
 
     border-radius: 5px;
@@ -176,7 +165,6 @@ main {
 
 #simulador section #right form .input-label {
     width: 100%;
-    margin-bottom: 5px;
 }
 
 #simulador section #right form .input-label label {
@@ -227,18 +215,63 @@ main {
     background-color: var(--color-main);
     color: var(--color-text);
     border: none;
-    width: 95px;
+    width: 110px;
     cursor: pointer;
     letter-spacing: .5px;
     transition: .3s ease-in-out;
+    font-size: 11pt;
     font-size: 500;
 }
 
-#simulador section #right form input[type='submit']:hover {
+#simulador section #right form input[type='submit']:hover,
+#entrar-em-contato a:hover {
     background-color: #2fa364;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
 }
 
+#simulador section #result {
+    text-align: center;
+    font-size: 12pt;
+    line-height: 23px;
+}
+
+#simulador section #result span {
+    color: var(--color-main);
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+#entrar-em-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem; 
+
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+
+    transition: .6s ease-in-out;
+
+    border-top: 1px solid silver;
+    padding-top: 1.5rem;
+}
+
+#entrar-em-contato a {
+    color: white;
+    background-color: var(--color-main);
+    
+    font-size: 10pt;
+    
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#entrar-em-contato p {
+    text-align: center;
+}
 
 #erro-consumo {
     text-align: center;
