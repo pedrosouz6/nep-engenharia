@@ -233,7 +233,7 @@ main {
     width: 100%;
     background: linear-gradient(210deg, var(--color-main), #5ddd90);
     clip-path: polygon(0 60px, 100% 0, 100% 100%, 0% 100%);
-    padding: 70px 0;
+    padding: 90px 0;
 }
 
 
@@ -276,7 +276,7 @@ main {
 /* projetos */
 #projetos {
     width: 100%;
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 #projetos .header--projetos h2 {
@@ -309,7 +309,7 @@ main {
     flex-direction: column;
     align-items: center;
     
-    background: linear-gradient(210deg, var(--color-main), #5ddd90);
+    background: var(--color-main);
 }
 
 #projetos .container--projetos .cards p {
@@ -343,12 +343,76 @@ main {
     width: 100%;
 }
 
+/* ------------------------------------------------------------------------------------------ */
+
+#missao-visao-valores {
+    width: 100%;
+    padding-top: 5rem;
+}
+
+#missao-visao-valores .header--projetos h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-image: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    
+    color: black;
+}
+
+#missao-visao-valores .container--projetos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#missao-visao-valores .container--projetos .cards {
+    width: 330px;
+    min-height: 420px;
+    max-height: auto;
+    padding: 20px;
+    border-radius: 3px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background: var(--color-main);
+}
+
+#missao-visao-valores .container--projetos .cards p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+    letter-spacing: .3px;
+}
+
+#missao-visao-valores .container--projetos .cards h4 {
+    color: white;
+    letter-spacing: .5px;
+    font-size: 14pt;
+    margin-bottom: 1rem;
+}
+
+#missao-visao-valores .container--projetos .cards .cards-img {
+    width: 110px;
+    height: 130px;
+}
+
+#missao-visao-valores .container--projetos .cards .cards-img img {
+    width: 100%;
+}
+
 
 /* rodape */
 #rodape {
     width: 100%;
     padding-top: 30px;
-    background: linear-gradient(210deg, var(--color-main), #5ddd90, var(--color-main));
+    background-color: var(--color-main);
     color: var(--color-text);
 }
 

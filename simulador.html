@@ -20,7 +20,7 @@
                     <ul>
                         <li><a href='./index.html#quem-somos'>Quem somos?</a></li>
                         <li><a href="./index.html#projetos">Projetos</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#rodape">Contato</a></li>
                         <li><a href="#simulador">Simulador</a></li>
                     </ul>   
                     
@@ -41,20 +41,26 @@
                 <article id='right'>
                     <form id='form-calculo'>
                         <h2>Simu<span>lador</span></h2>
-                        
-                        <input type="number" placeholder='Consumo mensal' min="1" id="consumo">
+
+                        <div class="input-label">
+                            <label for="consumo">Consumo mensal de energia</label>
+                            <input type="number" placeholder='Ex: 400' min="1" id="consumo">
+                        </div>
 
                         <p id="erro-consumo">Preenchar esse campo</p>
 
-                        <select id="watts">
-                            <option disabled selected value=''>Watts dos Módulos Solares</option>
-                            <option value='300'>300w</option>
-                            <option value='350'>350w</option>
-                            <option value='420'>420w</option>
-                            <option value='460'>460w</option>
-                            <option value='525'>525w</option>
-                            <option value='600'>600w</option>
-                        </select>
+                        <div class="input-label">
+                            <label for="escolher">Escolher os Watts dos Módulos Solares</label>
+                            <select id="watts" id="escolher">
+                                <option disabled selected value=''>Escolher Watts</option>
+                                <option value='300'>300w</option>
+                                <option value='350'>350w</option>
+                                <option value='420'>420w</option>
+                                <option value='460'>460w</option>
+                                <option value='525'>525w</option>
+                                <option value='600'>600w</option>
+                            </select>
+                        </div>
 
                         <p id='erro-watts'>Escolha o Watts</p>
 

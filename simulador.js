@@ -33,9 +33,9 @@ form.addEventListener('submit', (e) => {
         const calculoPlacasDigitos = calculoPlacas.toFixed(2);
         const calculoPlacasArredondar = calculoPlacasDigitos.split('.');
         if(calculoPlacasArredondar[1] > 70) {
-            result.innerHTML = `Você vai precisa de <span>${Math.ceil(calculoPlacasDigitos)}</span> Módulos Solares `
+            result.innerHTML = `Você vai precisa <span> aproximadamente </span> de <span>${Math.ceil(calculoPlacasDigitos)}</span> Módulos Solares `
         } else {
-            result.innerHTML = `Você vai precisa de <span>${Math.floor(calculoPlacasDigitos)}</span> Módulos Solares `
+            result.innerHTML = `Você vai precisa <span> aproximadamente </span> de <span>${Math.floor(calculoPlacasDigitos)}</span> Módulos Solares `
         }
     }
 })
